@@ -4,6 +4,10 @@ type propTypes = {
   type?: string;
   value: string | number;
   onChange: (e) => void;
+  prefixImage?: {
+    src: string;
+    alt: string;
+  };
 };
 type searchQuery = number | string;
 

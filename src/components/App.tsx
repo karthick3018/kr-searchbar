@@ -7,6 +7,10 @@ const App = () => {
   const handleChange = ({ target: { value } }) => {
     setSearchQuery(value);
   };
+  const imageProps = {
+    src: "https://source.unsplash.com/user/c_v_r/100x100",
+    alt: "user",
+  };
   return (
     <div>
       <SearchBar
@@ -14,6 +18,7 @@ const App = () => {
         placeholder="Search here"
         value={searchQuery}
         onChange={handleChange}
+        prefixImage={imageProps}
       />
     </div>
   );
