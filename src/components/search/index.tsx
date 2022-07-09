@@ -1,25 +1,26 @@
 import * as React from "react";
-import { propTypes } from "./searchTypes";
+import { PropTypes } from "./searchTypes";
 
-const SearchBar = ({
+const SearchBar = <T,>({
   name,
   placeholder,
   type,
   value,
   onChange,
-  prefixImage,
-}: propTypes) => {
+  prefixImage: PrefixImage,
+}: PropTypes<T>) => {
   return (
     <div>
       <p>Search</p>
       <div>
-        {prefixImage?.src ? (
+        <PrefixImage />
+        {/* {PrefixImage?.src ? (
           <figure>
-            <img {...prefixImage} loading="lazy" />
+            <img {...PrefixImage} loading="lazy" />
           </figure>
         ) : (
           ""
-        )}
+        )} */}
         <input
           name={name}
           placeholder={placeholder}
