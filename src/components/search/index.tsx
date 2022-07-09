@@ -13,14 +13,13 @@ const SearchBar = <T,>({
     <div>
       <p>Search</p>
       <div>
-        <PrefixImage />
-        {/* {PrefixImage?.src ? (
+        {PrefixImage?.src ? (
           <figure>
             <img {...PrefixImage} loading="lazy" />
           </figure>
         ) : (
-          ""
-        )} */}
+          <PrefixImage />
+        )}
         <input
           name={name}
           placeholder={placeholder}

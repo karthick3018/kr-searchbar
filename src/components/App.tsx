@@ -2,7 +2,7 @@ import * as React from "react";
 import SearchBar from "./search";
 import "./../assets/scss/App.scss";
 
-const userIcon = () => (
+const userIcon = (
   <svg
     width="16"
     height="16"
@@ -19,17 +19,12 @@ const userIcon = () => (
   </svg>
 );
 
-type ImageProps = {
-  src: string;
-  alt: string;
-};
-
 const App = () => {
   const [searchQuery, setSearchQuery] = React.useState<string>("");
   const handleChange = ({ target: { value } }) => {
     setSearchQuery(value);
   };
-  const imageProps: ImageProps = {
+  const imageProps = {
     src: "https://source.unsplash.com/user/c_v_r/100x100",
     alt: "user",
   };

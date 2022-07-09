@@ -5,7 +5,10 @@ type ImageObject = {
   alt?: string;
 };
 
-type ImageElement = React.FunctionComponent<any> | React.ElementType;
+type ImageElement =
+  | React.FunctionComponent<any>
+  | React.ElementType
+  | JSX.Element;
 
 type PrefixImage<T> = T extends ImageObject ? ImageObject : ImageElement;
 
@@ -15,7 +18,7 @@ type PropTypes<T> = {
   type?: string;
   value: string | number;
   onChange: (e) => void;
-  prefixImage: ImageElement;
+  prefixImage?: ImageElement | ImageObject;
 };
 type searchQuery = number | string;
 
