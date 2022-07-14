@@ -8,7 +8,10 @@ type ImageObject = {
 type ImageElement =
   | React.FunctionComponent<any>
   | React.ElementType
-  | JSX.Element;
+  | JSX.Element
+  | React.FC<React.SVGProps<SVGSVGElement>>;
+
+type NewImage = ImageElement & { src?: never };
 
 type PrefixImage<T> = T extends ImageObject ? ImageObject : ImageElement;
 
@@ -18,7 +21,7 @@ type PropTypes<T> = {
   type?: string;
   value: string | number;
   onChange: (e) => void;
-  prefixImage?: ImageElement | ImageObject;
+  prefixImage?: { src: string; alt: string } | NewImage;
 };
 type searchQuery = number | string;
 
