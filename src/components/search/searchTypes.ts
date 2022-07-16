@@ -7,9 +7,8 @@ type ImageObject = {
 
 type ImageElement =
   | React.FunctionComponent<any>
-  | React.ElementType
-  | JSX.Element
-  | React.FC<React.SVGProps<SVGSVGElement>>;
+  | React.ElementType<React.SVGProps<SVGSVGElement>>
+  | JSX.Element;
 
 type NewImage = ImageElement & { src?: never };
 

@@ -9,6 +9,9 @@ const SearchBar = <T,>({
   onChange,
   prefixImage: PrefixImage,
 }: PropTypes<T>) => {
+  const Component = !PrefixImage?.src
+    ? (PrefixImage as React.ElementType)
+    : null;
   return (
     <div>
       <p>Search</p>
@@ -18,7 +21,7 @@ const SearchBar = <T,>({
             <img {...PrefixImage} loading="lazy" />
           </figure>
         ) : (
-          <PrefixImage />
+          <Component />
         )}
         <input
           name={name}
