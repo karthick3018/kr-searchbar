@@ -3,7 +3,7 @@ import SearchBar from "./search";
 import "./../assets/scss/App.scss";
 import img1 from "./search/user.png";
 
-const userIcon = (
+const userIcon = () => (
   <svg
     width="16"
     height="16"
@@ -37,9 +37,8 @@ const App = () => {
         placeholder="Search here"
         value={searchQuery}
         onChange={handleChange}
-        prefixImage={imageProps}
+        prefixImage={userIcon}
       />
-      {/* <img src={img1} /> */}
     </div>
   );
 };
