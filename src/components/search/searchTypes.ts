@@ -20,7 +20,12 @@ type PropTypes<T> = {
   type?: string;
   value: string | number;
   onChange: (e) => void;
-  prefixImage?: { src: string; alt: string } | NewImage;
+  prefixImage?:
+    | {
+        src: string;
+        alt: string;
+      }
+    | NewImage;
 };
 type searchQuery = number | string;
 
