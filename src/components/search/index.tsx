@@ -18,7 +18,7 @@ const SearchBar = <T,>({
       <div>
         {PrefixImage?.src ? (
           <figure>
-            <img {...PrefixImage} loading="lazy" />
+            <img {...PrefixImage} loading="lazy" alt="prefix icon" />
           </figure>
         ) : (
           <PrefixComponent />
